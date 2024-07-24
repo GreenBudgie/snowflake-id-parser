@@ -11,7 +11,7 @@
 <label for="snowflake_id_input"></label>
 <input type="number" name="snowflakeId" id="snowflake_id_input">
 <button type="button" id="parse_button">Parse</button>
-<table>
+<table id="result_table">
     <tr>
         <td>Date and Time</td>
         <td><span class="result_date_time"></span></td>
@@ -26,7 +26,7 @@
     </tr>
 </table>
 
-<dl>
+<dl id="detailed_info">
     <dt>1. Convert snowflake ID to binary representation</dt>
     <dd>
         <span class="snowflake_id_decimal"></span>

@@ -3,11 +3,12 @@ const solarTimestamp = 1585710000000
 
 const snowflakeIdInput = document.getElementById("snowflake_id_input")
 
-snowflakeIdInput.value = "30744501272707584"
-
 const parseButton = document.getElementById("parse_button")
 
 parseButton.addEventListener("click", parse)
+
+const resultTable = document.getElementById("result_table")
+const detailedInfo = document.getElementById("detailed_info")
 
 const resultDateTimeElements = document.getElementsByClassName("result_date_time")
 const nodeNumberDecimalElements = document.getElementsByClassName("node_number_decimal")
@@ -43,6 +44,9 @@ function parse() {
     updateText(sequenceNumberDecimalElements, decimalData.decimalSequenceNumber)
     updateText(resultTimestampElements, resultTimestamp)
     updateText(resultDateTimeElements, resultDate)
+
+    resultTable.style.display = "block"
+    detailedInfo.style.display = "block"
 }
 
 function splitBinaryID(fullBinaryID) {
