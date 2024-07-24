@@ -2,34 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <title>Snowflake ID Parser</title>
 </head>
 <body>
 <h1>Snowflake ID parser</h1>
-<label for="snowflakeId"></label>
-<input type="number" name="snowflakeId" id="snowflakeId">
-<button type="button">Parse</button>
+<label for="snowflake_id_input"></label>
+<input type="number" name="snowflakeId" id="snowflake_id_input">
+<button type="button" id="parse_button">Parse</button>
 <table>
     <tr>
         <td>Timestamp</td>
-        <td>DATE</td>
+        <td><span class="result_date_time"></span></td>
     </tr>
     <tr>
         <td>Node Number</td>
-        <td>1</td>
+        <td><span class="node_number_decimal"></span></td>
     </tr>
     <tr>
         <td>Sequence Number</td>
-        <td>0</td>
+        <td><span class="sequence_number_decimal"></span></td>
     </tr>
 </table>
 
 <dl>
     <dt>1. Convert snowflake ID to binary representation</dt>
     <dd>
-        <span class="snowflake_id_decimal">123</span>
+        <span class="snowflake_id_decimal"></span>
         <span> -> </span>
-        <span class="snowflake_id_binary_no_zeros">123</span>
+        <span class="snowflake_id_binary"></span>
     </dd>
 
     <dt>2. Add leading zeros to binary ID representation</dt>
@@ -38,7 +39,7 @@
             We have to add zeros to the start of the number for easier parsing.
         </p>
         <span>Result: </span>
-        <span class="snowflake_id_binary_leading_zeros"></span>
+        <span class="full_snowflake_id_binary"></span>
     </dd>
 
     <dt>3. Split the binary representation into three parts</dt>
@@ -94,5 +95,6 @@
         <span class="sequence_number_decimal"></span>
     </dd>
 </dl>
+<script src="script.js"></script>
 </body>
 </html>
