@@ -1,15 +1,18 @@
+/* Import Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #434d59;
+    color: white;
 }
 
 h1 {
     text-align: center;
-    color: #4CAF50;
+    color: #e8432d;
     margin-top: 20px;
 }
 
@@ -24,11 +27,13 @@ input {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    background-color: #2e353f;
+    color: white;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #e8432d;
     color: white;
     border: none;
     border-radius: 4px;
@@ -36,7 +41,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #d73624;
 }
 
 /* Table styles */
@@ -44,25 +49,44 @@ table {
     width: 80%;
     margin: 20px auto;
     border-collapse: collapse;
-    background-color: #fff;
+    background-color: #2e353f;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 table, th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #555;
     padding: 10px;
     text-align: left;
+    color: white;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #3e4752;
+}
+
+/* Inner table styles */
+.inner-table {
+    width: 100%;
+    border: 1px solid #555;
+    margin: 10px 0;
+}
+
+.inner-table, .inner-table th, .inner-table td {
+    border: 1px solid #555;
+    padding: 10px;
+    text-align: left;
+    color: white;
+}
+
+.inner-table th {
+    background-color: #3e4752;
 }
 
 /* Description list styles */
 dl {
     width: 80%;
     margin: 20px auto;
-    background-color: #fff;
+    background-color: #2e353f;
     padding: 20px;
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -71,14 +95,22 @@ dl {
 dt {
     font-weight: bold;
     margin-top: 10px;
+    color: #e8432d;
 }
 
 dd {
     margin-left: 20px;
     margin-bottom: 10px;
+    color: white;
 }
 
 /* Span styles */
 span {
     font-family: monospace;
+    background-color: #3e4752;
+    color: white;
+    padding: 2px 4px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 2px 0;
 }

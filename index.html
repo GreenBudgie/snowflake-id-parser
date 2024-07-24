@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
     <title>Snowflake ID Parser</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>Snowflake ID parser</h1>
@@ -12,7 +12,7 @@
 <button type="button" id="parse_button">Parse</button>
 <table>
     <tr>
-        <td>Timestamp</td>
+        <td>Date and Time</td>
         <td><span class="result_date_time"></span></td>
     </tr>
     <tr>
@@ -36,30 +36,27 @@
     <dt>2. Add leading zeros to binary ID representation</dt>
     <dd>
         <p>SOLAR snowflake IDs always contain 59 bits.
-            We have to add zeros to the start of the number for easier parsing.
+            We have to add zeros to the start of the number for easier parsing:
         </p>
-        <span>Result: </span>
         <span class="full_snowflake_id_binary"></span>
     </dd>
 
     <dt>3. Split the binary representation into three parts</dt>
     <dd>
-        <dl>
-            <dt>Timestamp - first 41 bits</dt>
-            <dd>
-                <span class="timestamp_binary"></span>
-            </dd>
-
-            <dt>Node Number - 10 bits after timestamp</dt>
-            <dd>
-                <span class="node_number_binary"></span>
-            </dd>
-
-            <dt>Sequence Number - last 8 bits</dt>
-            <dd>
-                <span class="sequence_number_binary"></span>
-            </dd>
-        </dl>
+        <table class="inner-table">
+            <tr>
+                <td>Timestamp - first 41 bits</td>
+                <td><span class="timestamp_binary"></span></td>
+            </tr>
+            <tr>
+                <td>Node Number - 10 bits after timestamp</td>
+                <td><span class="node_number_binary"></span></td>
+            </tr>
+            <tr>
+                <td>Sequence Number - last 8 bits</td>
+                <td><span class="sequence_number_binary"></span></td>
+            </tr>
+        </table>
     </dd>
 
     <dt>4. Convert timestamp to decimal representation and then to date</dt>
@@ -74,7 +71,9 @@
             we have to sum these two timestamps:</p>
 
         <span class="timestamp_decimal"></span>
-        <span> + 1585710000000 = </span>
+        <span>+</span>
+        <span>1585710000000</span>
+        <span>=</span>
         <span class="result_timestamp"></span>
 
         <p>Then we can convert resulting timestamp to date and time: </p>
