@@ -45,7 +45,7 @@ function parse() {
     updateText(resultTimestampElements, resultTimestamp)
     updateText(resultDateTimeElements, resultDate)
 
-    resultTable.style.display = "block"
+    resultTable.style.display = "table"
     detailedInfo.style.display = "block"
 }
 
